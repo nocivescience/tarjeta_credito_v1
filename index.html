@@ -9,11 +9,90 @@
 </head>
 <body>
     <div class="contenedor">
-        <main class="tarjeta" id="tarjeta">
+        <section class="tarjeta" id="tarjeta">
             <div class="delantera">
-
+                <div class="logo-marca">
+                    <img src="./logos/mastercard.png" alt="">
+                </div>
+                <img src="./chip-tarjeta.png" class="chip" alt="">
+                <div class="datos">
+                    <div class="grupo" id="numero">
+                        <p class="label">Número de la tarjeta</p>
+                        <p class="numero">#### #### #### ####</p>
+                    </div>
+                    <div class="flexbox">
+                        <div class="grupo" id="nombre">
+                            <p class="label">Nombre de la Tarjeta</p>
+                            <p class="nombre">Joe Doe</p>
+                        </div>
+                        <div class="grupo" id="expiracion">
+                            <p class="label">Expiración</p>
+                            <p class="expiracion"><span class="mes">MM</span>/ <span class="year">AA</span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </main>
+            <div class="trasera">
+                <div class="barra-magnetica"></div>
+                <div class="datos">
+                    <div class="grupo" id="firma">
+                        <p class="label">Firma</p>
+                        <div class="firma"><p></p></div>
+                    </div>
+                    <div class="grupo" id="ccv">
+                        <p class="label">CCV</p>
+                        <p class="ccv">123</p>
+                    </div>
+                </div>
+                <p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, optio.</p>
+                <a href="#" class="link-banco">Mi banco</a>
+            </div>
+        </section>
+        <div class="contenedor-boton">
+            <button class="abrir-formulario" id="abrir-formulario">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus fas fa-plus" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+            </button>
+        </div>
+        <form action="" class="formulario-tarjeta" id="formulario-tarjeta">
+            <div class="grupo">
+                <label for="inputNumero">Número Tarjeta</label>
+                <input type="text" autocomplete="off" id="inputNumero" maxlength="19">
+            </div>
+            <div class="grupo">
+                <label for="inputNombre">Nombre</label>
+                <input type="text" autocomplete="off" id="inputNombre" maxlength="19">
+            </div>
+            <div class="flexbox">
+                <div class="grupo expira">
+                    <label for="selectMes">Expiración</label>
+                    <div class="flexbox">
+                        <div class="group-select">
+                            <select name="mes" id="selectMes">
+                                <option disabled selected>Mes</option>
+                            </select>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                        </div>
+                        <div class="group-select">
+                            <select name="year" id="selectYear">
+                                <option disabled selected>Año</option>
+                            </select>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="grupo ccv">
+                    <label for="inputCCV">CCV</label>
+                    <input type="text" name="" id="inputCCV" maxlength="3">
+                </div>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
     </div>
 </body>
 <script src="./script.js"></script>
